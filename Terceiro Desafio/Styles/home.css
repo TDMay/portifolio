@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Poetsen+One&display=swap');
+
+body{
+    background-color: black;
+}
+.cabecalho__link::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.2s ease; 
+    border-radius: 10px;
+}
+.cabecalho__link:hover::after{
+    width: 100%;
+}
+
+.cabacalho__conteudo{
+    position: relative;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.cabecalho__link{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+}
+
+.cabecalho__link.selecionado::after{
+    width: 100%;
+}
+
+.cabecalho__link img{
+    height: 30px;
+    
+}
+.principal{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.principal__conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.principal__conteudo__texto{
+    width: 500px;
+}
+
+.principal__conteudo__projetos{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    gap: 50px;
+}
+
+.princial__conteudo__projetos__texto{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.principal__conteudo__projetos__imagens{
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+}
+
+.imagem__projeto{
+    height: 250px;
+    border-radius: 10px;
+}
+
+.titulo{
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.titulo b{
+    color: rgb(0, 163, 248);
+}
+
+#nome::after{
+    content: "|";
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.subtexto{
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-family: "Mukta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.principal__conteudo__redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.principal__conteudo__redes .principal__conteudo__redes__subtexto{
+    font-size: 1.3rem;
+}
+
+.principal__conteudo__redes .principal__conteudo__redes__link{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 300px;
+    height: 60px;
+    border: 4px solid rgb(0, 163, 248);
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.principal__conteudo__redes .principal__conteudo__redes__link__icon{
+    height: 30px;
+}
+
+.principal__conteudo__redes .principal__conteudo__redes__link:hover{
+    border: 6px solid rgb(0, 163, 248);
+}
+
+.principal__imagem{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.imgRetangleBorder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 5px;
+    top: 5px;
+    border-radius: 10px;
+    border: 4px solid rgb(0, 163, 248);
+    z-index: -1;
+}
+
+.principal__imagem img{
+    height: 450px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.principal__habilidade{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.principal__conteudo__habilidades img{
+    height: 450;
+    width: 450;
+}
+
+.imgCircleBorder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 15px;
+    top: 15px;
+    border-radius: 100%;
+    background-color: rgb(0, 163, 248);
+    border: 4px solid rgb(0, 163, 248);
+    z-index: -1;
+}
+
+.rodape hr{
+ margin: 10px;
+ background-color: red;
+}
+.rodape__conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape__conteudo img{
+    width: 90px;
+}
+
+.principal__conteudo__habilidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+    gap: 70px;
+}
+
+.btnCertificados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+
+@media(max-width: 830px){
+    .cabacalho__conteudo{
+        gap: 70px;
+    }
+    .cabecalho__link{
+        width: 60px;
+        height: 40px;
+    }
+    
+    .principal{
+        margin: 20px;
+        width: auto;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+
+    .principal__conteudo__texto{
+        width: 300px;
+    }
+
+    .principal__habilidade img{
+        width: 300px;
+    }
+
+    .principal__imagem img{
+        width: 350px;
+        height: auto;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+    .imgCircleBorder::before{
+        left: 5px;
+        top: 5px;
+    }
+    .principal__conteudo__projetos{
+        width: 300px;
+        gap: 10px;
+    }
+    .principal__conteudo__projetos__imagens{
+        flex-direction: column;
+    }
+
+    .imagem__projeto{
+        width: 100%;
+        height: auto;
+    }
+}
